@@ -1,14 +1,8 @@
 import { createStore } from 'vuex'
+import navLinks from "./navLinks";
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+    navLinks
   }
 })
