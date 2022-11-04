@@ -1,0 +1,20 @@
+@import "normalize";
+@import "variables";
+.v-container {
+  max-width: $containerWidth;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+.v-row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex: 1 1 100%;
+}
+.v-col {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}

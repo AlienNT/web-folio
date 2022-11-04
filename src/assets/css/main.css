@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  box-shadow: none;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.v-container {
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+.v-row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex: 1 1 100%;
+}
+
+.v-col {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */
