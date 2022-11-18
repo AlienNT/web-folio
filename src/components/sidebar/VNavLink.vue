@@ -1,7 +1,9 @@
 <template>
-  <li class="v-sidebar__item">
+  <li class="v-sidebar__item v-col">
     <router-link
+        class="v-sidebar__link v-transition"
         :to="path"
+        @click="e => $emit('onClick', e)"
     >
       {{ title }}
     </router-link>
@@ -20,10 +22,30 @@ export default {
       type: String,
       default: null
     },
+  },
+  methods: {
+    navClick (e) {
+      console.log('navClick', e)
+    }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.v-sidebar__item {
+  padding: 5px 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  .v-sidebar__link {
+    display: block;
+    color: $sidebarLinkColor;
+    &:hover {
+      color: $sidebarLinkHoverColor;
+    }
+  }
+  .router-link-active {
+    color: $sidebarLinkHoverColor;
+  }
+}
 
 </style>
