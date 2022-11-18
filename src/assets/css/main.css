@@ -16,6 +16,7 @@ img {
 
 .v-container {
   max-width: 1200px;
+  height: 100%;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
@@ -33,6 +34,18 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
+}
+
+.v-transition {
+  transition: 0.2s ease;
+}
+
+.v-screen-title {
+  text-align: center;
+}
+
+.view-wrapper {
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
