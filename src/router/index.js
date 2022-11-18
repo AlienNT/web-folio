@@ -18,13 +18,13 @@ const routes = [
     {
         path: '/works',
         name: 'works',
-        component: ContactsView,
+        component: WorksView,
     },
     {
         path: '/contacts',
         name: 'contacts',
-        component: WorksView,
-    },
+        component: ContactsView,
+    }
 ]
 
 const router = createRouter({
