@@ -13,5 +13,8 @@ export default {
     },
     GET_SKILLS: (state) => {
         return state.skills
+    },
+    GET_SCROLL_EVENT: (state) => {
+        return state.scrollEvent
     }
 }
