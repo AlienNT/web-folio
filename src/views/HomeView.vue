@@ -1,31 +1,29 @@
 <template>
-  <div class="view-wrapper">
-    <div class="v-screen-title">HomeView</div>
+  <div
+      class="view-wrapper"
+      :ref="$options.name"
+  >
+    <div class="wrapper">
+      <div class="v-screen-title">HomeView</div>
+    </div>
   </div>
 </template>
 
 <script>
+import {ViewMixin} from "@/views/viewMixin";
+
 export default {
   name: "HomeView",
-  data() {
-    return {
-      show: false
-    }
-  },
-  mounted() {
-    setTimeout(() => {
-      this.show = true
-    }, 100)
-  },
-  beforeUnmount() {
-    this.show = false
-  }
+  mixins: [
+    ViewMixin
+  ]
 }
 </script>
 
 <style scoped lang="scss">
 .view-wrapper {
-  background: #ccc;
+  background: transparent;
+  color: #cccccc;
 }
 
 .slide-fade-enter-active {
