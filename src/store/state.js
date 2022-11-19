@@ -3,6 +3,7 @@ export default {
     navLinks: [],
     profile: {},
     skills: [],
-    works: []
+    works: [],
+    scrollEvent: null
 
 }
