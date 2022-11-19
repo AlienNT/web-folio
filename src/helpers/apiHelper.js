@@ -27,3 +27,9 @@ export function checkObjectFields(object) {
 export function errorMessage(message, response) {
     dev.warn(`${message}${response?.status ? `: ${response.status}` : ''}`)
 }
+
+export function setTitle(title) {
+    if (title) {
+        document.title = title
+    }
+}
