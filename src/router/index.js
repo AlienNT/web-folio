@@ -7,22 +7,22 @@ import WorksView from "@/views/WorksView";
 const routes = [
     {
         path: '/',
-        name: 'home',
+        name: 'Home',
         component: HomeView,
     },
     {
         path: '/about',
-        name: 'about',
+        name: 'About',
         component: AboutView,
     },
     {
         path: '/works',
-        name: 'works',
+        name: 'Works',
         component: WorksView,
     },
     {
         path: '/contacts',
-        name: 'contacts',
+        name: 'Contacts',
         component: ContactsView,
     }
 ]
