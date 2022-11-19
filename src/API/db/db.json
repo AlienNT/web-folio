@@ -1,0 +1,118 @@
+{
+  "profile": [
+    {
+      "id": 1,
+      "name": "name",
+      "value": "Nick",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "name": "surname",
+      "value": "Tristen",
+      "order": 1
+    },
+    {
+      "id": 3,
+      "name": "date_of_birth",
+      "value": "27.03.98",
+      "order": 1
+    },
+    {
+      "id": 4,
+      "name": "password",
+      "value": "1111",
+      "order": 1
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "name": "phone",
+      "order": 1,
+      "value": "+380956076895"
+    },
+    {
+      "id": 2,
+      "name": "phone",
+      "order": 1,
+      "value": "+380956076895"
+    },
+    {
+      "id": 3,
+      "name": "email",
+      "order": 1,
+      "value": "nick.tristen22@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "linkedin",
+      "order": 1,
+      "value": ""
+    },
+    {
+      "id": 5,
+      "name": "github",
+      "order": 1,
+      "value": ""
+    }
+  ],
+  "navLinks": [
+    {
+      "id": 1,
+      "title": "Home",
+      "path": "/",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "title": "About",
+      "path": "/about",
+      "order": 1
+    },
+    {
+      "id": 3,
+      "title": "Works",
+      "path": "/works",
+      "order": 1
+    },
+    {
+      "id": 4,
+      "title": "Contacts",
+      "path": "/contacts",
+      "order": 1
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "title": "HTML",
+      "percent": 86,
+      "order": 1
+    },
+    {
+      "id": 2,
+      "title": "CSS",
+      "percent": 91,
+      "order": 1
+    },
+    {
+      "id": 3,
+      "title": "JavaScript",
+      "percent": 74,
+      "order": 1
+    },
+    {
+      "id": 4,
+      "title": "Vue",
+      "percent": 72,
+      "order": 1
+    }
+  ],
+  "works": [
+    {
+      "id": 1,
+      "title": "title1"
+    }
+  ]
+}

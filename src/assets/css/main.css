@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  box-shadow: none;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.v-container {
+  max-width: 1200px;
+  height: 100%;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+.v-row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex: 1 1 100%;
+}
+
+.v-col {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.v-transition {
+  transition: 0.2s ease;
+}
+
+.v-screen-title {
+  text-align: center;
+}
+
+.view-wrapper {
+  height: 100%;
+  padding: 15px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.view-wrapper:first-child {
+  height: 100%;
+}
+.view-wrapper .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+@media all and (max-width: 500px) {
+  .view-wrapper {
+    height: fit-content;
+  }
+}
+
+.v-scroll {
+  overflow-y: auto;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+.v-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.v-scroll::-webkit-scrollbar-track {
+  background: #7a6995;
+  opacity: 0.5;
+}
+.v-scroll::-webkit-scrollbar-thumb {
+  background: rgb(73, 63, 89);
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+.v-scroll::-webkit-scrollbar-thumb:hover {
+  background: #615477;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */

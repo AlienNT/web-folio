@@ -1,0 +1,84 @@
+@import "normalize";
+@import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+.v-container {
+  max-width: $containerWidth;
+  height: 100%;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+.v-row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  flex: 1 1 100%;
+}
+
+.v-col {
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.v-transition {
+  transition: 0.2s ease;
+}
+
+.v-screen-title {
+  text-align: center;
+}
+
+.view-wrapper {
+  height: 100%;
+  padding: 15px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  &:first-child {
+    height: 100%;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  @media all and (max-width: 500px){
+    height: fit-content;
+  }
+}
+
+.v-scroll {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: lighten($sidebarBgColor, 20%);
+    opacity: 0.5;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $sidebarBgColor;
+    border-radius: 5px;
+    transition: .2s ease;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: lighten($sidebarBgColor, 10%);
+    cursor: pointer;
+  }
+}

@@ -1,4 +1,14 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  transpileDependencies: true
+  transpileDependencies: true,
+  css: {
+    loaderOptions: {
+      sass: {
+        additionalData: `@import '@/assets/css/variables.scss';`
+      }
+    }
+  },
+  publicPath: process.env.NODE_ENV === 'production'
+      ? '/web-folio/'
+      : '/'
 })
