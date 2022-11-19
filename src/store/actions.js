@@ -31,8 +31,16 @@ export default {
             route: routes.PROFILE,
             errorMessage: 'fetchProfile error'
         })
+    },
+    scrollEvent({commit}, ref = null) {
+        commit('setScrollEvent', ref)
+    },
+    scrollAction({commit}, payload) {
+        if (`${payload?.event}View` === payload?.refName && payload?.element) {
+            payload.element.scrollIntoView()
+            commit('setScrollEvent')
+        }
     }
-
 }
 
 async function universalGetRequest(commit, config) {
