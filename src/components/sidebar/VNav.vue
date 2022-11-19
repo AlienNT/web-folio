@@ -8,6 +8,8 @@
         <VNavLink
             :path="link?.path"
             :title="link?.title"
+            :is-mobile="isMobile"
+            :align="align"
             @onClick="e => $emit('onClick', e)"
 
         />
@@ -24,6 +26,14 @@ export default {
   props: {
     navLinks: {
       type: Array,
+      default: null
+    },
+    isMobile: {
+      type: Boolean,
+      default: false
+    },
+    align: {
+      type: String,
       default: null
     }
   },
