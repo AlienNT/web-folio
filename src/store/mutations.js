@@ -13,5 +13,8 @@ export default {
     },
     setProfile: (state, data) => {
         state.profile = data
+    },
+    setScrollEvent: (state, data) => {
+        state.scrollEvent = data
     }
 }
