@@ -7,5 +7,8 @@ module.exports = defineConfig({
         additionalData: `@import '@/assets/css/variables.scss';`
       }
     }
-  }
+  },
+  publicPath: process.env.NODE_ENV === 'production'
+      ? '/web-folio/'
+      : '/'
 })
