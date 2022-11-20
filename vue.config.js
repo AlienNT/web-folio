@@ -8,7 +8,7 @@ module.exports = defineConfig({
       }
     }
   },
-  publicPath: process.env.NODE_ENV === 'production'
-      ? '/web-folio/'
-      : '/'
+  // publicPath: process.env.NODE_ENV === 'production'
+  //     ? '/web-folio/'
+  //     : '/'
 })
