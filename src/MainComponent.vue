@@ -103,12 +103,13 @@ export default {
   background: #ffffff;
   display: flex;
   width: 100%;
-  max-height: 100vh;
+  height: 100vh;
+  max-height: -webkit-fill-available;
   overflow: hidden;
 }
 
 .v-sidebar-component, .v-content-component {
-  height: 100vh;
+  height: 100%;
   display: flex;
 }
 

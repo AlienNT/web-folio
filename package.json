@@ -44,9 +44,7 @@
     "rules": {}
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
+    "defaults and supports es6-module",
+    "maintained node versions"
   ]
 }
