@@ -1,5 +1,5 @@
 import axios from "axios";
-import {dev, host} from "@/API/config";
+import {dev} from "@/API/config";
 
 export const routes = {
     NAV_LINKS: 'navLinks',
@@ -11,8 +11,6 @@ export const routes = {
 
 
 export function apiRequest(method = "GET", url, data = null) {
-    axios.defaults.baseURL = host
-
     return axios({
         method,
         url,

@@ -8,7 +8,11 @@ module.exports = defineConfig({
       }
     }
   },
+  lintOnSave: true,
   publicPath: process.env.NODE_ENV === 'production'
       ? '/web-folio/'
-      : '/'
+      : '/',
+  devServer: {
+    proxy: 'https://fake-json-server-nt.herokuapp.com'
+  }
 })

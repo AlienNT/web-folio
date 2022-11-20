@@ -1,5 +1,4 @@
-export const host = 'https://fake-json-server-nt.herokuapp.com'
-const isDev = true
+const isDev = process.env.NODE_ENV !== 'production'
 
 export const dev = {
     log: (message) => isDev ? console.log(message) : null,
