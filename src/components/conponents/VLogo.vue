@@ -3,6 +3,7 @@
     <a
         :href="path"
         class="logo__link"
+        @click.prevent.stop="$emit('onClick')"
     >
       <img
           :src="src"

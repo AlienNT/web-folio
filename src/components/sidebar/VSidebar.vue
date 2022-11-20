@@ -14,6 +14,7 @@
             path="/"
             alt="logo"
             :src="logoSrc"
+            @onClick="isMobile? onClick('Home'): $router.push('/')"
         />
       </div>
       <VToggleButton
