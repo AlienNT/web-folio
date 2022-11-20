@@ -1,4 +1,4 @@
-export const host = 'http://localhost:4000'
+export const host = 'https://fake-json-server-nt.herokuapp.com'
 const isDev = true
 
 export const dev = {
