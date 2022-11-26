@@ -73,11 +73,13 @@ img {
   }
 }
 
+.v-full-height {
+  height: 100vh;
+  max-height: -webkit-fill-available;
+}
+
 .v-scroll {
   overflow-y: auto;
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
 }
 .v-scroll::-webkit-scrollbar {
   width: 5px;

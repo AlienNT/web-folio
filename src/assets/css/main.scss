@@ -6,6 +6,7 @@
   font-family: 'Open Sans', sans-serif;
   scroll-behavior: smooth;
 }
+
 .v-container {
   max-width: $containerWidth;
   height: 100%;
@@ -42,9 +43,11 @@
   background: #ffffff;
   display: flex;
   align-items: center;
+
   &:first-child {
     height: 100%;
   }
+
   .wrapper {
     display: flex;
     align-items: center;
@@ -52,13 +55,20 @@
     flex-direction: column;
     width: 100%;
   }
-  @media all and (max-width: 500px){
+
+  @media all and (max-width: 500px) {
     height: fit-content;
   }
 }
 
+.v-full-height {
+  height: 100vh;
+  max-height: -webkit-fill-available;
+}
+
 .v-scroll {
   overflow-y: auto;
+
   &::-webkit-scrollbar {
     width: 5px;
   }
