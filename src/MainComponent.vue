@@ -1,31 +1,38 @@
 <template>
-  <div
-      class="v-main-component"
-      :class="{
+  <transition name="fade">
+    <div
+        v-if="navLinks"
+        class="v-main-component v-full-height"
+        :class="{
         'mobile-app': isMobile
       }"
-  >
-    <div class="v-sidebar-component">
-      <VSidebar
-          :navLinks="navLinks"
-          :isMobile="isMobile"
-          @onClick="setScrollEvent"
-      />
-    </div>
-    <div class="v-content-component"
-         ref="v-content">
+    >
+      <div class="v-sidebar-component">
+        <VSidebar
+            :navLinks="navLinks"
+            :isMobile="isMobile"
+            @onClick="setScrollEvent"
+        />
+      </div>
+      <div class="v-content-component"
+           ref="v-content">
 
         <VContent
             :isMobile="isMobile"
         />
       </div>
 
-  </div>
+    </div>
+    <template v-else>
+      <VSpinner/>
+    </template>
+  </transition>
 </template>
 
 <script>
 import VSidebar from "@/components/sidebar/VSidebar";
 import VContent from "@/components/content/VContent";
+import VSpinner from "@/components/conponents/VSpinner";
 import {_notEmpty} from "@/helpers/fakeLodash";
 import {setTitle} from "@/helpers/apiHelper";
 
@@ -33,11 +40,13 @@ export default {
   name: "MainComponent",
   components: {
     VSidebar,
-    VContent
+    VContent,
+    VSpinner
   },
   data() {
     return {
       windowWidth: null,
+      show: false
     }
   },
   computed: {
@@ -62,7 +71,10 @@ export default {
     }
   },
   methods: {
-    setScrollEvent (event) {
+    event(event) {
+      console.log(event)
+    },
+    setScrollEvent(event) {
       this.$store.dispatch('scrollEvent', event)
     },
     setInnerWidth() {
@@ -70,23 +82,19 @@ export default {
     },
     async getNavLinks() {
       return await this.$store.dispatch('fetchNavLinks')
-      /*return await axios(
-          {
-            url: routes.NAV_LINKS,
-            method: 'GET',
-            onUploadProgress: (e) => this.onProgress = e.loaded * 100 / e.total,
-            onDownloadProgress: (e) => this.onProgress = e.loaded * 100 / e.total,
-          })*/
     },
   },
   async created() {
-    await this.getNavLinks()
     this.setInnerWidth()
+    await this.getNavLinks()
   },
   mounted() {
     window.addEventListener('resize', () => {
       this.setInnerWidth()
     })
+    setTimeout(() => {
+      this.show = true
+    }, 0)
   },
   beforeUnmount() {
     window.removeEventListener('resize', () => {
@@ -99,12 +107,14 @@ export default {
 <style lang="scss">
 @import "assets/css/main.scss";
 
+[v-cloac] {
+  opacity: 0;
+}
+
 .v-main-component {
   background: #ffffff;
   display: flex;
   width: 100%;
-  height: 100vh;
-  max-height: -webkit-fill-available;
   overflow: hidden;
 }
 
@@ -115,15 +125,19 @@ export default {
 
 .v-sidebar-component {
   min-width: fit-content;
+  width: 0;
 }
 
 .v-content-component {
   background-image: url("assets/img/background.webp");
+  background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
 
   overflow-y: auto;
   flex: 1 1 auto;
   overflow-x: hidden;
+
   .v-content {
     background: rgba(50, 44, 61, 0.8);
   }
@@ -152,6 +166,13 @@ export default {
       }
     }
   }
+}
 
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s ease;
 }
 </style>
