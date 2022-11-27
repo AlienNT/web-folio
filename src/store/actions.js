@@ -37,8 +37,14 @@ export default {
     },
     scrollAction({commit}, payload) {
         if (`${payload?.event}View` === payload?.refName && payload?.element) {
-            payload.element.scrollIntoView()
-            commit('setScrollEvent')
+            setTimeout(() => {
+                payload.element.scrollIntoView({
+                    block: "start",
+                    inline: "nearest",
+                    behavior: "smooth"
+                })
+                commit('setScrollEvent')
+            }, 250)
         }
     },
     setIsMobileAction({commit}, payload) {
@@ -56,6 +62,7 @@ async function universalGetRequest(commit, config) {
             return response
         })
 }
+
 const getMutation = (routeName) => {
     return 'set' + routeName[0].toUpperCase() + routeName.slice(1)
 }
