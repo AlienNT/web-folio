@@ -46,33 +46,6 @@ img {
   transition: 0.2s ease;
 }
 
-.v-screen-title {
-  text-align: center;
-}
-
-.view-wrapper {
-  height: 100%;
-  padding: 15px;
-  background: #ffffff;
-  display: flex;
-  align-items: center;
-}
-.view-wrapper:first-child {
-  height: 100%;
-}
-.view-wrapper .wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-}
-@media all and (max-width: 500px) {
-  .view-wrapper {
-    height: fit-content;
-  }
-}
-
 .v-full-height {
   height: 100vh;
   max-height: -webkit-fill-available;
@@ -80,6 +53,9 @@ img {
 
 .v-scroll {
   overflow-y: auto;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 .v-scroll::-webkit-scrollbar {
   width: 5px;
