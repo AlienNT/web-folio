@@ -1,24 +1,25 @@
 <template>
-  <div
-      class="view-wrapper"
-      :ref="$options.name"
+  <ViewTemplate
+      :ref-name="$options.name"
   >
-    <div class="wrapper">
-      <div class="v-screen-title">ContactsView</div>
+    <template v-slot:title>
+      {{ $options.name }}
+    </template>
+    <template v-slot:content>
       {{contacts}}
-    </div>
-  </div>
+    </template>
+  </ViewTemplate>
 </template>
 
 <script>
-import {ViewMixin} from "@/views/viewMixin";
+import ViewTemplate from "@/views/templates/ViewTemplate";
 import {_notEmpty} from "@/helpers/fakeLodash";
 
 export default {
   name: "ContactsView",
-  mixins: [
-    ViewMixin
-  ],
+  components: {
+    ViewTemplate,
+  },
   computed: {
     contacts () {
       return _notEmpty(this.$store.getters['GET_CONTACTS'])

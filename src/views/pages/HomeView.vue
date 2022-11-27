@@ -1,22 +1,20 @@
 <template>
-  <div
-      class="view-wrapper"
-      :ref="$options.name"
+  <ViewTemplate
+      :ref-name="$options.name"
   >
-    <div class="wrapper">
-      <div class="v-screen-title">HomeView</div>
-    </div>
-  </div>
+    <template v-slot:title>
+      {{ $options.name }}
+    </template>
+  </ViewTemplate>
 </template>
 
 <script>
-import {ViewMixin} from "@/views/viewMixin";
-
+import ViewTemplate from "@/views/templates/ViewTemplate";
 export default {
   name: "HomeView",
-  mixins: [
-    ViewMixin
-  ]
+  components: {
+    ViewTemplate,
+  }
 }
 </script>
 
