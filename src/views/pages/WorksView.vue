@@ -11,9 +11,6 @@
             :works-list="works"
         />
       </template>
-      <div v-else>
-        нет записей
-      </div>
     </template>
   </ViewTemplate>
 </template>

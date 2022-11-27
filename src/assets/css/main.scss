@@ -7,6 +7,10 @@
   scroll-behavior: smooth;
 }
 
+button {
+  cursor: pointer;
+}
+
 .v-container {
   max-width: $containerWidth;
   height: 100%;
@@ -63,4 +67,15 @@
     background: lighten($sidebarBgColor, 10%);
     cursor: pointer;
   }
+}
+
+
+.fade-enter-active, .fade-leave-active {
+   transition: opacity 2s;
+ }
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+.transparent {
+  opacity: 0;
 }
