@@ -4,6 +4,6 @@ export default {
     profile: {},
     skills: [],
     works: [],
-    scrollEvent: null
-
+    scrollEvent: null,
+    isMobile: false
 }

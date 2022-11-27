@@ -40,6 +40,9 @@ export default {
             payload.element.scrollIntoView()
             commit('setScrollEvent')
         }
+    },
+    setIsMobileAction({commit}, payload) {
+        commit('setIsMobile', payload)
     }
 }
 

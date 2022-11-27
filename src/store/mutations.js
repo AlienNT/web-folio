@@ -16,5 +16,8 @@ export default {
     },
     setScrollEvent: (state, data) => {
         state.scrollEvent = data
+    },
+    setIsMobile: (state, data) => {
+        state.isMobile = data
     }
 }

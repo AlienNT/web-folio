@@ -31,3 +31,10 @@ export function setTitle(title) {
         document.title = title
     }
 }
+export const isMobile = {
+    computed: {
+        isMobile() {
+            return this.$store.getters['GET_IS_MOBILE']
+        }
+    }
+}

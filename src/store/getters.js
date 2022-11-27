@@ -16,5 +16,8 @@ export default {
     },
     GET_SCROLL_EVENT: (state) => {
         return state.scrollEvent
+    },
+    GET_IS_MOBILE: (state) => {
+        return state.isMobile
     }
 }
