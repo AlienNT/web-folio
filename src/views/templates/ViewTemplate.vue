@@ -1,6 +1,9 @@
 <template>
   <div
       class="view-wrapper"
+      :class="{
+        'mobile-view-wrapper': isMobile
+      }"
       :ref="refName"
   >
     <div class="wrapper">
@@ -56,7 +59,6 @@ export default {
   padding: 15px;
   background: #ffffff;
   display: flex;
-  //align-items: center;
 
   &:first-child {
     height: 100%;
@@ -64,10 +66,8 @@ export default {
 
   .wrapper {
     display: flex;
-    //align-items: center;
     justify-content: center;
     flex-direction: column;
-    //flex: 1 1 auto;
     margin: auto;
     width: 100%;
   }
@@ -75,6 +75,9 @@ export default {
   @media all and (max-width: 500px) {
     height: fit-content;
   }
+}
+.mobile-view-wrapper {
+  min-height: 100%;
 }
 .v-screen-title {
   text-align: center;
