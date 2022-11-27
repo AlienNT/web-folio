@@ -45,20 +45,22 @@ export default {
   },
   data() {
     return {
-      windowWidth: null,
-      show: false
+      windowWidth: null
     }
   },
   computed: {
     navLinks() {
       return _notEmpty(this.$store.getters['GET_NAV_LINKS'])
     },
-    isMobile() {
-      //todo адаптив для малых экранов
-      return this.windowWidth < 500
-    },
+    // isMobile() {
+    //   //todo адаптив для малых экранов
+    //   return this.windowWidth < 500
+    // },
     routeName() {
       return this.$route['name']
+    },
+    screenTypeChange() {
+      return this.windowWidth < 500
     }
   },
   watch: {
@@ -66,6 +68,12 @@ export default {
       handler(e) {
         setTitle(e)
 
+      },
+      immediate: true
+    },
+    screenTypeChange: {
+      handler() {
+        this.setScreenTypeChange()
       },
       immediate: true
     }
@@ -76,6 +84,9 @@ export default {
     },
     setScrollEvent(event) {
       this.$store.dispatch('scrollEvent', event)
+    },
+    setScreenTypeChange () {
+      this.$store.dispatch('setIsMobileAction', this.screenTypeChange)
     },
     setInnerWidth() {
       this.windowWidth = window.innerWidth
@@ -92,9 +103,6 @@ export default {
     window.addEventListener('resize', () => {
       this.setInnerWidth()
     })
-    setTimeout(() => {
-      this.show = true
-    }, 0)
   },
   beforeUnmount() {
     window.removeEventListener('resize', () => {

@@ -43,10 +43,10 @@
 export default {
   name: "VContent",
   props: {
-    isMobile: {
-      type: Boolean,
-      default: false
-    }
+    // isMobile: {
+    //   type: Boolean,
+    //   default: false
+    // }
   },
   computed: {
     routerComponents() {
@@ -84,20 +84,22 @@ export default {
 }
 
 .slide-fade-enter {
-  transition: all .5s ease;
+  transition: all .2s ease;
 }
 
 .slide-fade-enter-active {
-  transform: translateX(-50%);
+  transform: translateX(-100%);
+  //position: absolute;
 }
 
 .slide-fade-enter-active, .slide-fade-leave-active {
-  transition: all .5s ease;
-  opacity: 0;
+  transition: all .2s ease;
+  //opacity: 0;
 }
 
 .slide-fade-leave-active {
-  transform: translateX(50%);
+  //position: absolute;
+  transform: translateX(100%);
 }
 
 .show-scroll {

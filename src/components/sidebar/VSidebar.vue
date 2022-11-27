@@ -50,10 +50,10 @@ export default {
       type: Array,
       default: null
     },
-    isMobile: {
-      type: Boolean,
-      default: false
-    }
+    // isMobile: {
+    //   type: Boolean,
+    //   default: false
+    // }
   },
   data() {
     return {

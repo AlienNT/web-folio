@@ -35,10 +35,10 @@ export default {
       type: String,
       default: null
     },
-    isMobile: {
-      type: Boolean,
-      default: false
-    },
+    // isMobile: {
+    //   type: Boolean,
+    //   default: false
+    // },
     align: {
       type: String,
       default: 'left'
